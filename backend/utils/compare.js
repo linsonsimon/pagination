@@ -9,7 +9,6 @@ function compareasc(a, b, name) {
 }
 
 function comparedesc(a, b, name) {
-  console.log("hi", name);
   if (a[name] > b[name]) {
     return -1;
   }

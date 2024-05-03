@@ -8,6 +8,7 @@ const getStudents = async (req, res) => {
     const limit = req.query.limit ? req.query.limit : 10;
     const asc = req.query.asc ? req.query.asc : null;
     const desc = req.query.desc ? req.query.desc : null;
+    console.log(asc, desc);
     let stud = "";
 
     if (asc !== null && desc !== null) {
@@ -37,7 +38,9 @@ const getStudents = async (req, res) => {
     const endIndex = page * limit;
 
     if (stud !== "") {
-      res.status(200).json(stud.slice(startIndex, endIndex));
+      res
+        .status(200)
+        .json({ students: stud.slice(startIndex, endIndex), totalPage });
     } else
       res
         .status(200)

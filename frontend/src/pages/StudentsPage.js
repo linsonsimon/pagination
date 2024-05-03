@@ -22,6 +22,7 @@ const StudentsPage = () => {
     try {
       console.log(config);
       const res = await axios.get(`http://localhost:8000/students`, config);
+      console.log(filter, page, limit);
 
       console.log(res.data.students);
       setStudents(res.data.students);

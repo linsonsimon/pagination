@@ -1,0 +1,18 @@
+http://localhost:8000/students
+
+<!-- default values limit=10 page=1 -->
+
+http://localhost:8000/students?page=1&limit=20
+
+<!-- returns first 20 students -->
+
+http://localhost:8000/students?asc=0
+http://localhost:8000/students?desc=1
+
+<!--
+0 = name(sort by name)
+1 = totalMarks(sort by total marks)
+asc= ascending
+desc = descending
+both asc and desc cant be used in same url
+ -->

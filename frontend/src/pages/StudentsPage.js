@@ -3,6 +3,8 @@ import axios from "axios";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 
+import "./StudentPage.css";
+
 const StudentsPage = () => {
   const [students, setStudents] = useState("");
   const [filter, setFilter] = useState([]);
@@ -59,8 +61,12 @@ const StudentsPage = () => {
 
   return (
     <div>
-      <div style={{ height: "80vh", overflowX: "scroll" }}>
-        <table style={{ width: "100%" }}>
+      <div style={{ height: "80vh", overflowX: "scroll", padding: "1px" }}>
+        <table
+          style={{
+            width: "100%",
+          }}
+        >
           <tbody>
             <tr>
               <th>id</th>
